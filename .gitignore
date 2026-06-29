@@ -1,0 +1,9 @@
+.DS_Store
+node_modules/
+.pnpm-store/
+dist/
+*.log
+
+# Source materials kept local; the site already uses extracted public assets.
+report/
+*.docx
