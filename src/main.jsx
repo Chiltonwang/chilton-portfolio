@@ -21,6 +21,8 @@ const navItems = [
   ['联系', '#contact'],
 ];
 
+const asset = (path) => `${import.meta.env.BASE_URL}${path.replace(/^\//, '')}`;
+
 const metrics = [
   { value: '6+', label: '品牌线下推广与整合营销经验' },
   { value: '60+', label: '高端体验活动累计交付' },
@@ -33,7 +35,7 @@ const projects = [
     title: 'Kakubin 上海快闪店',
     brand: '宾三得利',
     type: 'Pop-up Campaign Report',
-    image: '/assets/projects/kakubin.png',
+    image: asset('/assets/projects/kakubin.png'),
     brief: '面向年轻消费人群的城市快闪体验，聚焦品牌识别、试饮互动与社交传播。',
     role: '客户需求确认、现场动线梳理、供应商 / 场地 / 人员协同、物料清单与执行时间表管理。',
   },
@@ -41,7 +43,7 @@ const projects = [
     title: 'JIM BEAM 草莓音乐节快闪店',
     brand: '宾三得利',
     type: 'Festival Completion Report',
-    image: '/assets/projects/jimbeam-strawberry.jpg',
+    image: asset('/assets/projects/jimbeam-strawberry.jpg'),
     brief: '音乐节高客流场景下的新客触达与新品试饮转化，支撑单日上万级消费者接待。',
     role: '现场统筹、试饮流程设计、兼职培训、互动话术与突发情况协调。',
   },
@@ -49,7 +51,7 @@ const projects = [
     title: '传奇源自拉菲罗斯柴尔德 成都快闪',
     brand: 'LEGENDE R',
     type: 'Campaign Report',
-    image: '/assets/projects/legende.jpg',
+    image: asset('/assets/projects/legende.jpg'),
     brief: '核心商圈品牌体验快闪，兼顾品牌形象展示、消费者教育与现场销售转化。',
     role: '客户沟通、执行排期、设计搭建跟进、现场运营流程、排班及物料管理。',
   },
@@ -57,7 +59,7 @@ const projects = [
     title: 'The Glenrothes 40 年上市发布会',
     brand: 'Edrington Group',
     type: 'Event Launch Report',
-    image: '/assets/projects/glenrothes.jpg',
+    image: asset('/assets/projects/glenrothes.jpg'),
     brief: '高端威士忌发布与私享晚宴，面向品牌高层、媒体与高净值客户。',
     role: '嘉宾接待、座位动线、酒款服务节奏、供应商沟通与现场应急预案。',
   },
@@ -65,7 +67,7 @@ const projects = [
     title: 'Edrington Group CIIE',
     brand: 'Edrington Group',
     type: 'Completion Report',
-    image: '/assets/projects/ciie.jpg',
+    image: asset('/assets/projects/ciie.jpg'),
     brief: '大型展会场景下的品牌露出、消费者互动与多方资源协作。',
     role: '展会执行推进、供应商协调、现场巡检、问题复盘及客户反馈整理。',
   },
@@ -73,7 +75,7 @@ const projects = [
     title: '金宾圣诞限时小镇',
     brand: 'Jim Beam',
     type: 'Pop-up Completion Report',
-    image: '/assets/projects/christmas.jpg',
+    image: asset('/assets/projects/christmas.jpg'),
     brief: '节日档期快闪体验，以沉浸式场景和试饮互动提升品牌触达。',
     role: '搭建跟进、动线管理、人员分工、库存巡检和撤场节点控制。',
   },
@@ -247,7 +249,7 @@ function App() {
         <div className="sectionLabel">Experience</div>
         <div className="experienceGrid">
           <div className="portraitBlock">
-            <img src="/assets/profile.png" alt="王清正 Chilton 个人照片" />
+            <img src={asset('/assets/profile.png')} alt="王清正 Chilton 个人照片" />
             <div className="portraitCaption">
               <strong>王清正 Chilton</strong>
               <span>高级客户执行 / SAE</span>
